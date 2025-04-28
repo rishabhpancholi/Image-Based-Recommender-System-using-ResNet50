@@ -42,6 +42,10 @@ body {
     transform: translateY(-5px);
 }
 
+.image-title{
+    color: white;
+}
+
 .image-card img {
     width: 100%;
     height: 250px;

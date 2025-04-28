@@ -44,17 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Display results
             data.similar_images.slice(0,6).forEach(imagePath => {
                 const productInfo = productMap.get(imagePath);
-                const card = document.createElement('div');
-                card.className = 'image-card';
-                card.innerHTML = `
-                    <img src="static/images/${imagePath}" alt="Similar image">
-                    ${productInfo ? `
-                        <div class="product-info">
-                            <h4>${productInfo.ProductTitle}</h4>
-                        </div>
-                    ` : ''}
-                `;
-                results.appendChild(card);
+
+                let imagesHTML = `<div class = "col-md-3 mb-4">
+                                     <div class="image-card">
+                                        <img src="${productInfo.ImageURL}" alt="Similar image">
+                                        <div class = "product-info">
+                                          <h5 class="image-title">${productInfo.ProductTitle.toUpperCase()}</h5>
+                                        </div>
+                                   </div>
+                                  </div>`;
+
+                results.innerHTML+=imagesHTML;
             });
 
         } catch (error) {
