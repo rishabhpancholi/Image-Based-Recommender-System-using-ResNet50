@@ -10,6 +10,22 @@ A powerful image-based recommendation system that uses deep learning to find vis
 - Web-based interface for easy interaction
 - Real-time recommendations
 
+## Screenshots
+
+### Homepage
+![Homepage Screenshot](screenshots/homepage.png)
+
+### Results Page
+![Results Page Screenshot](screenshots/results.png)
+
+## Live Demo
+
+[Try the Live Demo](https://your-demo-url.com)
+
+## ⭐ Star the Repository
+
+If you find this project useful, please consider giving it a star! Your support helps the project grow and reach more people.
+
 ## Prerequisites
 
 - Python 3.12
@@ -25,9 +41,13 @@ git clone https://github.com/yourusername/image-based-recommender.git
 cd image-based-recommender
 ```
 
-2. Install dependencies:
+2. Install dependencies using pip:
 ```bash
-pip install -r requirements.txt
+pip install .
+```
+Or if you want to install in development mode:
+```bash
+pip install -e .
 ```
 
 ## Project Structure
