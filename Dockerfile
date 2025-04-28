@@ -7,9 +7,12 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-# Install Python dependencies
+# Install Poetry
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install poetry
+
+# Install dependencies using Poetry
+RUN poetry install --no-root
 
 # Create necessary directories
 RUN mkdir -p artifacts static/images
