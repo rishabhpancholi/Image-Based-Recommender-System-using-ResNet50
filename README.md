@@ -15,7 +15,7 @@ A powerful image-based recommendation system that uses deep learning to find vis
 ### Homepage
 ![Homepage Screenshot](screenshots/homepage.png)
 
-### Results Page
+### Results 
 ![Results Page Screenshot](screenshots/results.png)
 
 
