@@ -35,6 +35,8 @@ If you find this project useful, please consider giving it a star! Your support 
 
 ## Installation
 
+### Local Installation
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/image-based-recommender.git
@@ -50,24 +52,45 @@ Or if you want to install in development mode:
 pip install -e .
 ```
 
+### Docker Installation
+
+1. Make sure you have Docker and Docker Compose installed on your system.
+
+2. Clone the repository:
+```bash
+git clone https://github.com/yourusername/image-based-recommender.git
+cd image-based-recommender
+```
+
+3. Build and start the Docker container:
+```bash
+docker-compose up --build
+```
+
+4. The application will be available at `http://localhost:8000`
+
 ## Project Structure
 
 ```
 image-based-recommender/
-├── app.py              # Main FastAPI application
-├── helper.py           # Helper functions for feature extraction
-├── static/             # Static files and images
-├── templates/          # HTML templates
-├── research/           # Research and development files
-├── artifacts/          # Model artifacts and data
-└── pyproject.toml      # Project dependencies
+├── src/                  # Source code
+│   ├── __init__.py      # Package initialization
+│   ├── app.py           # Main FastAPI application
+│   └── helper.py        # Helper functions for feature extraction
+├── static/              # Static files and images
+├── templates/           # HTML templates
+├── research/            # Research and development files
+├── artifacts/           # Model artifacts and data
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Docker Compose configuration
+└── pyproject.toml       # Project dependencies
 ```
 
 ## Usage
 
 1. Start the server:
 ```bash
-uvicorn app:app --reload
+uvicorn src.app:app --reload
 ```
 
 2. Open your browser and navigate to `http://localhost:8000`

@@ -12,7 +12,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import GlobalMaxPooling2D
 from tensorflow.keras.applications.resnet50 import ResNet50
-from helper import extract_features
+from .helper import extract_features
 
 def ensure_images_in_static():
     """
@@ -118,4 +118,5 @@ def load_features():
 load_features()
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
