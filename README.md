@@ -18,9 +18,6 @@ A powerful image-based recommendation system that uses deep learning to find vis
 ### Results Page
 ![Results Page Screenshot](screenshots/results.png)
 
-## Live Demo
-
-[Try the Live Demo](https://your-demo-url.com)
 
 ## ⭐ Star the Repository
 
